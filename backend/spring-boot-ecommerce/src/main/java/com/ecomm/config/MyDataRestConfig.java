@@ -17,13 +17,13 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
         // disable PUT,POST AND DELETE for product
         config.getExposureConfiguration()
                 .forDomainType(Product.class)
-                .withItemExposure(((metdata, httpMethods) -> httpMethods.disable(theUnsupportedActions)))
-                .withCollectionExposure((metdata, httpMethods) -> httpMethods.disable(theUnsupportedActions));
+                .withItemExposure(((metadata, httpMethods) -> httpMethods.disable(theUnsupportedActions)))
+                .withCollectionExposure((metadata, httpMethods) -> httpMethods.disable(theUnsupportedActions));
         // disable PUT,POST AND DELETE for product-category
         config.getExposureConfiguration()
                 .forDomainType(ProductCategory.class)
-                .withItemExposure(((metdata, httpMethods) -> httpMethods.disable(theUnsupportedActions)))
-                .withCollectionExposure((metdata, httpMethods) -> httpMethods.disable(theUnsupportedActions));
+                .withItemExposure(((metadata, httpMethods) -> httpMethods.disable(theUnsupportedActions)))
+                .withCollectionExposure((metadata, httpMethods) -> httpMethods.disable(theUnsupportedActions));
 
     }
 }
